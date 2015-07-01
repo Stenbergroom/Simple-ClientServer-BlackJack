@@ -19,6 +19,7 @@ public class Player {
 
     public Player(String host) {
         chatServer = host;
+        displayMessage("\n\t\t*****Welcome to Blackjack game!*****\n");
     }
 
     public void runClient() {

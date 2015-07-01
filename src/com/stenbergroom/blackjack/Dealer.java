@@ -29,6 +29,7 @@ public class Dealer {
         players = new ArrayList();
         socketServer = new SocketServer[100]; // allocate array for up to 100 server threads
         executor = Executors.newFixedThreadPool(100); // create thread pool
+        displayMessage("\n\t\t*****Welcome to Blackjack game!*****\n");
     }
 
     // set up and run server
@@ -146,7 +147,7 @@ public class Dealer {
             sendData(message);
             if(!roundStarted) {
                 roundStarted = true;
-                displayMessage("Deal cards? - y/n"); // "(y/n)"
+                displayMessage("\tTO DEAL CARDS PRESS - 'Y' OR PRESS - 'N' TO LEAVE GAME:\n");
                 String step = scan.next();
                 if (step.equals("y")) {
                     // send cards to clients
