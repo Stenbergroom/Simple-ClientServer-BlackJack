@@ -146,7 +146,7 @@ public class Dealer {
             sendData(message);
             if(!roundStarted) {
                 roundStarted = true;
-                displayMessage("Deal cards? - y/n");
+                displayMessage("Deal cards? - y/n"); // "(y/n)"
                 String step = scan.next();
                 if (step.equals("y")) {
                     // send cards to clients
