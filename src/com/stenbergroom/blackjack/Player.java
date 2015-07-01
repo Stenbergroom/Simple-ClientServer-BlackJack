@@ -24,9 +24,9 @@ public class Player {
 
     public void runClient() {
         try {
-            connectToServer(); // create a Socket to make connection
-            getStreams(); // get the input and output streams
-            processConnection(); // process connection
+            connectToServer();
+            getStreams();
+            processConnection();
         } catch (EOFException e) {
             displayMessage("\nClient terminated connection");
         } catch (IOException e) {
@@ -52,12 +52,11 @@ public class Player {
     private void processConnection() throws IOException {
         do {
             try {
-                message = (String) input.readObject(); // read new message
-                displayMessage("\n" + message); // display message
+                message = (String) input.readObject();
+                displayMessage("\n" + message);
                 if(message.contains("Select hit or stay? - (h/s)")){
                     while (true) {
                         String step = scan.next();
-                        //send message to Server
                         if (step.equals("h")) {
                             sendData("hit");
                             break;
