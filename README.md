@@ -1,2 +1,2 @@
 # Simple-ClientServer-BlackJack
-Console Black Jack
+Simple console Blackjack game
